@@ -16,7 +16,7 @@ public class NodalResearch
 
     public static void initResearch()
     {
-        researchNodeCatalyzation = new ResearchItem("NODECATALYZATION", "BASICS", new AspectList().add(Aspect.AURA, 6).add(Aspect.VOID, 3), -5, 4, 3, new ItemStack(NodalItems.itemMatrix))
+        researchNodeCatalyzation = new ResearchItem("NODECATALYZATION", "BASICS", new AspectList().add(Aspect.AURA, 30).add(Aspect.VOID, 25).add(Aspect.GREED, 15).add(Aspect.ELDRITCH, 15).add(Aspect.MIND, 10).add(Aspect.MAGIC, 5), -5, 4, 3, new ItemStack(NodalItems.itemMatrix))
                                                     .setPages(new ResearchPage[]{
                                                     new ResearchPage(StatCollector.translateToLocal("nodalmechanics.nodecatalyzation.research")),
                                                     new ResearchPage(NodalRecipes.matrixRecipe),
@@ -27,7 +27,7 @@ public class NodalResearch
                                                     .setParents("NODEJAR", "NODETAPPER2").setParentsHidden("JARLABEL").setSpecial();
         researchNodeCatalyzation.registerResearchItem();
 
-        ThaumcraftApi.addWarpToResearch("NODECATALYZATION", 2);
-        ThaumcraftApi.addWarpToItem(new ItemStack(NodalItems.itemMatrix), 1);
+        ThaumcraftApi.addWarpToResearch("NODECATALYZATION", 5);
+        ThaumcraftApi.addWarpToItem(new ItemStack(NodalItems.itemMatrix), 5);
     }
 }

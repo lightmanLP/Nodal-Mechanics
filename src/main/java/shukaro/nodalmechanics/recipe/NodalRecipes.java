@@ -1,8 +1,12 @@
 package shukaro.nodalmechanics.recipe;
 
+import fox.spiteful.forbidden.DarkAspects;
+import fox.spiteful.forbidden.items.ForbiddenItems;
+import WayofTime.alchemicalWizardry.ModItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import shukaro.nodalmechanics.items.NodalItems;
+import taintedmagic.common.registry.ItemRegistry;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
@@ -10,9 +14,10 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 
+
 public class NodalRecipes
 {
-    public static ShapedArcaneRecipe matrixRecipe;
+    public static InfusionRecipe matrixRecipe;
     public static ShapedArcaneRecipe variedAttuneRecipe;
     public static ShapedArcaneRecipe sameAttuneRecipe;
     public static InfusionRecipe variedNodeRecipe;
@@ -20,14 +25,7 @@ public class NodalRecipes
 
     public NodalRecipes()
     {
-        matrixRecipe = new ShapedArcaneRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), new AspectList().add(Aspect.ORDER, 20).add(Aspect.ENTROPY, 20), new Object[] {
-                "XYX",
-                "YZY",
-                "XYX",
-                Character.valueOf('X'), ItemApi.getItem("itemResource", 14),
-                Character.valueOf('Y'), ItemApi.getBlock("blockMagicalLog", 0),
-                Character.valueOf('Z'), ItemApi.getBlock("blockJar", 0)
-        });
+        matrixRecipe = new InfusionRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), 10, new AspectList().add(Aspect.GREED, 80).add(DarkAspects.LUST, 16).add(Aspect.MINE, 16), ItemApi.getBlock("blockJar", 0), new ItemStack []{new ItemStack(ModItems.demonBloodShard, 1, 0), new ItemStack(ForbiddenItems.deadlyShards, 1, 5), new ItemStack(ForbiddenItems.deadlyShards, 1, 3), new ItemStack(ItemRegistry.EldritchShard, 1, 0)});
 
         NBTTagCompound variedAttuneTag = new NBTTagCompound();
         variedAttuneTag.setString("aspects", "aer,terra,ignis,aqua,ordo,perditio");
@@ -92,14 +90,7 @@ public class NodalRecipes
 
     public void initRecipes()
     {
-        ThaumcraftApi.addArcaneCraftingRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), new AspectList().add(Aspect.ORDER, 20).add(Aspect.ENTROPY, 20), new Object[]{
-                "XYX",
-                "YZY",
-                "XYX",
-                Character.valueOf('X'), ItemApi.getItem("itemResource", 14),
-                Character.valueOf('Y'), ItemApi.getBlock("blockMagicalLog", 0),
-                Character.valueOf('Z'), ItemApi.getBlock("blockJar", 0)
-        });
+        ThaumcraftApi.addInfusionCraftingRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), 10, new AspectList().add(Aspect.GREED, 80).add(DarkAspects.LUST, 16).add(Aspect.MINE, 16), ItemApi.getBlock("blockJar", 0), new ItemStack []{new ItemStack(ModItems.demonBloodShard, 1, 0), new ItemStack(ForbiddenItems.deadlyShards, 1, 5), new ItemStack(ForbiddenItems.deadlyShards, 1, 3), new ItemStack(ItemRegistry.EldritchShard, 1, 0)});
 
         RecipeAttune ra = new RecipeAttune();
         ThaumcraftApi.getCraftingRecipes().add(ra);

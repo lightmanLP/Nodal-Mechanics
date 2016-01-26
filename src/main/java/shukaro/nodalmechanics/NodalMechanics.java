@@ -15,7 +15,7 @@ import shukaro.nodalmechanics.recipe.NodalRecipes;
 import shukaro.nodalmechanics.research.NodalResearch;
 
 @Mod(modid = NodalMechanics.modID, name = NodalMechanics.modName, version = NodalMechanics.modVersion,
-        dependencies = "required-after:Thaumcraft")
+        dependencies = "required-after:Thaumcraft; required-after:ForbiddenMagic; required-after:TaintedMagic; required-after:AWWayofTime;")
 public class NodalMechanics
 {
     @SidedProxy(clientSide = "shukaro.nodalmechanics.net.ClientProxy", serverSide = "shukaro.nodalmechanics.net.CommonProxy")
