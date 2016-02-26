@@ -16,7 +16,7 @@ public class NodalResearch
 
     public static void initResearch()
     {
-        researchNodeCatalyzation = new ResearchItem("NODECATALYZATION", "BASICS", new AspectList().add(Aspect.AURA, 30).add(Aspect.VOID, 25).add(Aspect.GREED, 15).add(Aspect.ELDRITCH, 15).add(Aspect.MIND, 10).add(Aspect.MAGIC, 5), -5, 4, 3, new ItemStack(NodalItems.itemMatrix))
+        researchNodeCatalyzation = new ResearchItem("NODECATALYZATION", "BASICS", new AspectList().add(Aspect.AURA, 20).add(Aspect.VOID, 15).add(Aspect.GREED, 12).add(Aspect.ELDRITCH, 9).add(Aspect.MIND, 6).add(Aspect.MAGIC, 3), -5, 4, 3, new ItemStack(NodalItems.itemMatrix))
                                                     .setPages(new ResearchPage[]{
                                                     new ResearchPage(StatCollector.translateToLocal("nodalmechanics.nodecatalyzation.research")),
                                                     new ResearchPage(NodalRecipes.matrixRecipe),
