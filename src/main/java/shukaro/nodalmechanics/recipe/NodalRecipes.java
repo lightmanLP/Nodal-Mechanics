@@ -25,7 +25,7 @@ public class NodalRecipes
 
     public NodalRecipes()
     {
-        matrixRecipe = new InfusionRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), 10, new AspectList().add(Aspect.GREED, 80).add(DarkAspects.LUST, 16).add(Aspect.MINE, 16), ItemApi.getBlock("blockJar", 0), new ItemStack []{new ItemStack(ModItems.demonBloodShard, 1, 0), new ItemStack(ForbiddenItems.deadlyShards, 1, 5), new ItemStack(ForbiddenItems.deadlyShards, 1, 3), new ItemStack(ItemRegistry.EldritchShard, 1, 0)});
+        matrixRecipe = new InfusionRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), 10, new AspectList().add(Aspect.GREED, 80).add(DarkAspects.LUST, 16).add(Aspect.MINE, 16), ItemApi.getBlock("blockJar", 0), new ItemStack []{new ItemStack(ModItems.demonBloodShard, 1, 0), new ItemStack(ForbiddenItems.deadlyShards, 1, 5), new ItemStack(ForbiddenItems.deadlyShards, 1, 3), new ItemStack(ItemRegistry.ItemMaterial, 1, 5)});
 
         NBTTagCompound variedAttuneTag = new NBTTagCompound();
         variedAttuneTag.setString("aspects", "aer,terra,ignis,aqua,ordo,perditio");
@@ -90,7 +90,7 @@ public class NodalRecipes
 
     public void initRecipes()
     {
-        ThaumcraftApi.addInfusionCraftingRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), 10, new AspectList().add(Aspect.GREED, 80).add(DarkAspects.LUST, 16).add(Aspect.MINE, 16), ItemApi.getBlock("blockJar", 0), new ItemStack []{new ItemStack(ModItems.demonBloodShard, 1, 0), new ItemStack(ForbiddenItems.deadlyShards, 1, 5), new ItemStack(ForbiddenItems.deadlyShards, 1, 3), new ItemStack(ItemRegistry.EldritchShard, 1, 0)});
+        ThaumcraftApi.addInfusionCraftingRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), 10, new AspectList().add(Aspect.GREED, 80).add(DarkAspects.LUST, 16).add(Aspect.MINE, 16), ItemApi.getBlock("blockJar", 0), new ItemStack []{new ItemStack(ModItems.demonBloodShard, 1, 0), new ItemStack(ForbiddenItems.deadlyShards, 1, 5), new ItemStack(ForbiddenItems.deadlyShards, 1, 3), new ItemStack(ItemRegistry.ItemMaterial, 1, 5)});
 
         RecipeAttune ra = new RecipeAttune();
         ThaumcraftApi.getCraftingRecipes().add(ra);
