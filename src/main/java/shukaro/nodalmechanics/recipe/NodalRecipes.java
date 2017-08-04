@@ -33,19 +33,19 @@ public class NodalRecipes
                                                            new ItemStack(ForbiddenItems.deadlyShards, 1, 5),
                                                            new ItemStack(ForbiddenItems.deadlyShards, 1, 3),
                                                            new ItemStack(ItemRegistry.ItemMaterial, 1, 5)});
-        AspectList attuneAspectList = new AspectList().add(Aspect.AIR, 1)
-                                                      .add(Aspect.WATER, 1)
-                                                      .add(Aspect.FIRE, 1)
-                                                      .add(Aspect.ORDER, 1)
-                                                      .add(Aspect.ENTROPY, 1)
-                                                      .add(Aspect.EARTH, 1);
+        AspectList attuneAspectList = new AspectList().add(Aspect.AIR, 2)
+                                                      .add(Aspect.WATER, 2)
+                                                      .add(Aspect.FIRE, 2)
+                                                      .add(Aspect.ORDER, 2)
+                                                      .add(Aspect.ENTROPY, 2)
+                                                      .add(Aspect.EARTH, 2);
         ItemStack variedAttune = new ItemStack(NodalItems.itemMatrix);
         ItemStack[] phials = new ItemStack[6];
         ArrayList<Aspect> primalAspects = Aspect.getPrimalAspects();
         AspectList variedAspectList = new AspectList();
         for (int i = 0; i < primalAspects.size(); i++)
         {
-            variedAspectList.add(primalAspects.get(i), 1);
+            variedAspectList.add(primalAspects.get(i), 2);
             phials[i] = ItemApi.getItem("itemEssence", 1);
             NBTTagCompound tagCompound = new NBTTagCompound();
             AspectList phialAspectList = new AspectList().add(primalAspects.get(i), 8);
@@ -60,24 +60,25 @@ public class NodalRecipes
                                    phials[0], 'B', phials[1], 'C', phials[2], 'D', phials[3], 'E', phials[4], 'F',
                                    phials[5], 'X', NodalItems.itemMatrix);
         ItemStack sameAttune = new ItemStack(NodalItems.itemMatrix);
-        AspectList sameAspectList = new AspectList().add(Aspect.FIRE, 8);
+        AspectList sameAspectList = new AspectList().add(Aspect.FIRE, 16);
         NBTTagCompound sameTagCompound = new NBTTagCompound();
         sameAspectList.writeToNBT(sameTagCompound);
         sameAttune.setTagCompound(sameTagCompound);
         ItemStack phial = ItemApi.getItem("itemEssence", 1);
+        AspectList phialAspectList = new AspectList().add(Aspect.FIRE, 8);
         NBTTagCompound phialTagCompound = new NBTTagCompound();
-        sameAspectList.writeToNBT(phialTagCompound);
+        phialAspectList.writeToNBT(phialTagCompound);
         phial.setTagCompound(phialTagCompound);
         sameAttuneRecipe =
             new ShapedArcaneRecipe("NODECATALYZATION", sameAttune, attuneAspectList, "AAA", "ABA", "AAA", 'A',
                                    phial.copy(), 'B', NodalItems.itemMatrix);
         NBTTagCompound variedNodeTagCompound = new NBTTagCompound();
-        AspectList variedNodeAspectList = new AspectList().add(Aspect.AIR, 1)
-                                                          .add(Aspect.EARTH, 1)
-                                                          .add(Aspect.FIRE, 1)
-                                                          .add(Aspect.WATER, 1)
-                                                          .add(Aspect.ORDER, 1)
-                                                          .add(Aspect.ENTROPY, 1);
+        AspectList variedNodeAspectList = new AspectList().add(Aspect.AIR, 2)
+                                                          .add(Aspect.EARTH, 2)
+                                                          .add(Aspect.FIRE, 2)
+                                                          .add(Aspect.WATER, 2)
+                                                          .add(Aspect.ORDER, 2)
+                                                          .add(Aspect.ENTROPY, 2);
         variedNodeAspectList.writeToNBT(variedNodeTagCompound);
         variedNodeTagCompound.setInteger("nodetype", 0);
         ItemStack variedNode = ItemApi.getItem("itemJarNode", 0);
@@ -94,7 +95,7 @@ public class NodalRecipes
                                                                ItemApi.getItem("itemResource", 14),
                                                                ItemApi.getItem("itemResource", 14)});
         NBTTagCompound sameNodeTagCompound = new NBTTagCompound();
-        AspectList sameNodeAspectList = new AspectList().add(Aspect.FIRE, 8);
+        AspectList sameNodeAspectList = new AspectList().add(Aspect.FIRE, 16);
         sameNodeAspectList.writeToNBT(sameNodeTagCompound);
         sameNodeTagCompound.setInteger("nodetype", 0);
         ItemStack sameNode = ItemApi.getItem("itemJarNode", 0);

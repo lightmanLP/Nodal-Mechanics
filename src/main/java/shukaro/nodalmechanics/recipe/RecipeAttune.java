@@ -113,12 +113,12 @@ public class RecipeAttune
     @Override
     public AspectList getAspects()
     {
-        return new AspectList().add(Aspect.AIR, 1)
-                               .add(Aspect.WATER, 1)
-                               .add(Aspect.FIRE, 1)
-                               .add(Aspect.ORDER, 1)
-                               .add(Aspect.ENTROPY, 1)
-                               .add(Aspect.EARTH, 1);
+        return new AspectList().add(Aspect.AIR, 2)
+                               .add(Aspect.WATER, 2)
+                               .add(Aspect.FIRE, 2)
+                               .add(Aspect.ORDER, 2)
+                               .add(Aspect.ENTROPY, 2)
+                               .add(Aspect.EARTH, 2);
     }
     @Override
     public AspectList getAspects(IInventory inventory)
