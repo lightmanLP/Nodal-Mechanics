@@ -28,7 +28,7 @@ public class NodalResearch
             new ResearchPage(NodalRecipes.sameAttuneRecipe), new ResearchPage(NodalRecipes.variedNodeRecipe),
             new ResearchPage(NodalRecipes.sameNodeRecipe)).setParents("NODEJAR", "NODETAPPER2").setParentsHidden("JARLABEL").setSpecial();
         researchNodeCatalyzation.registerResearchItem();
-        ThaumcraftApi.addWarpToResearch("NODECATALYZATION", 5);
-        ThaumcraftApi.addWarpToItem(new ItemStack(NodalItems.itemMatrix), 5);
+        ThaumcraftApi.addWarpToResearch("NODECATALYZATION", 8);
+        ThaumcraftApi.addWarpToItem(new ItemStack(NodalItems.itemMatrix), 8);
     }
 }
