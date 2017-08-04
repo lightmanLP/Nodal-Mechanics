@@ -12,21 +12,22 @@ import thaumcraft.api.research.ResearchPage;
 
 public class NodalResearch
 {
-    public static ResearchItem researchNodeCatalyzation;
-
+    private static ResearchItem researchNodeCatalyzation;
     public static void initResearch()
     {
-        researchNodeCatalyzation = new ResearchItem("NODECATALYZATION", "BASICS", new AspectList().add(Aspect.AURA, 20).add(Aspect.VOID, 15).add(Aspect.GREED, 12).add(Aspect.ELDRITCH, 9).add(Aspect.MIND, 6).add(Aspect.MAGIC, 3), -5, 4, 3, new ItemStack(NodalItems.itemMatrix))
-                                                    .setPages(new ResearchPage[]{
-                                                    new ResearchPage(StatCollector.translateToLocal("nodalmechanics.nodecatalyzation.research")),
-                                                    new ResearchPage(NodalRecipes.matrixRecipe),
-                                                    new ResearchPage(NodalRecipes.variedAttuneRecipe),
-                                                    new ResearchPage(NodalRecipes.sameAttuneRecipe),
-                                                    new ResearchPage(NodalRecipes.variedNodeRecipe),
-                                                    new ResearchPage(NodalRecipes.sameNodeRecipe)})
-                                                    .setParents("NODEJAR", "NODETAPPER2").setParentsHidden("JARLABEL").setSpecial();
+        researchNodeCatalyzation = new ResearchItem("NODECATALYZATION", "BASICS",
+                                                    new AspectList().add(Aspect.AURA, 20)
+                                                                    .add(Aspect.VOID, 15)
+                                                                    .add(Aspect.GREED, 12)
+                                                                    .add(Aspect.ELDRITCH, 9)
+                                                                    .add(Aspect.MIND, 6)
+                                                                    .add(Aspect.MAGIC, 3),
+                                                    -5, 4, 3, new ItemStack(NodalItems.itemMatrix)).setPages(
+            new ResearchPage(StatCollector.translateToLocal("nodalmechanics.nodecatalyzation.research")),
+            new ResearchPage(NodalRecipes.matrixRecipe), new ResearchPage(NodalRecipes.variedAttuneRecipe),
+            new ResearchPage(NodalRecipes.sameAttuneRecipe), new ResearchPage(NodalRecipes.variedNodeRecipe),
+            new ResearchPage(NodalRecipes.sameNodeRecipe)).setParents("NODEJAR", "NODETAPPER2").setParentsHidden("JARLABEL").setSpecial();
         researchNodeCatalyzation.registerResearchItem();
-
         ThaumcraftApi.addWarpToResearch("NODECATALYZATION", 5);
         ThaumcraftApi.addWarpToItem(new ItemStack(NodalItems.itemMatrix), 5);
     }
