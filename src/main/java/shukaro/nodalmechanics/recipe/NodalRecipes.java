@@ -13,6 +13,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
+import thaumcraft.common.Thaumcraft;
 
 import java.util.ArrayList;
 
@@ -25,20 +26,22 @@ public class NodalRecipes
     public static InfusionRecipe sameNodeRecipe;
     private ItemStack energyCrystal;
     private ArrayList<ItemStack> circuitAdvancedList;
+    private ItemStack balancedShard;
     public NodalRecipes()
     {
         energyCrystal = new ItemStack(Ic2Items.energyCrystal.getItem(), 1, OreDictionary.WILDCARD_VALUE);
         circuitAdvancedList = OreDictionary.getOres("circuitAdvanced");
+        balancedShard = ItemApi.getItem("itemResource",6);
         matrixRecipe = new InfusionRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), 10, new AspectList()
-            .add(Aspect.GREED, 80)
-            .add(DarkAspects.LUST, 40)
-            .add(Aspect.MINE, 40), ItemApi.getBlock("blockJar", 3),
-                                          new ItemStack[] {energyCrystal,
+            .add(DarkAspects.SLOTH, 16)
+            .add(DarkAspects.PRIDE, 16)
+            .add(Aspect.AURA, 32)
+                .add(Aspect.MAGIC,32),energyCrystal, new ItemStack[] {new ItemStack(ForbiddenItems.deadlyShards, 1, 5),
+                                                           balancedShard,
                                                            new ItemStack(ForbiddenItems.deadlyShards, 1, 5),
-                                                           new ItemStack(ForbiddenItems.deadlyShards, 1, 6),
-                                                           circuitAdvancedList.get(0),
-                                                           new ItemStack(ForbiddenItems.deadlyShards, 1, 3),
-                                                           new ItemStack(ForbiddenItems.deadlyShards, 1, 1)});
+                                                           balancedShard,
+                                                           new ItemStack(ForbiddenItems.deadlyShards, 1, 5),
+                                                           balancedShard});
         AspectList attuneAspectList = new AspectList().add(Aspect.AIR, 2)
                                                       .add(Aspect.WATER, 2)
                                                       .add(Aspect.FIRE, 2)
@@ -119,16 +122,16 @@ public class NodalRecipes
         for (ItemStack circuitAdvanced : circuitAdvancedList)
         {
             ThaumcraftApi.addInfusionCraftingRecipe("NODECATALYZATION", new ItemStack(NodalItems.itemMatrix), 10,
-                                                    new AspectList().add(Aspect.GREED, 80)
-                                                                    .add(DarkAspects.LUST, 40)
-                                                                    .add(Aspect.MINE, 40),
-                                                    ItemApi.getBlock("blockJar", 3),
-                                                    new ItemStack[] {energyCrystal,
-                                                                     new ItemStack(ForbiddenItems.deadlyShards, 1, 5),
-                                                                     new ItemStack(ForbiddenItems.deadlyShards, 1, 6),
-                                                                     circuitAdvanced,
-                                                                     new ItemStack(ForbiddenItems.deadlyShards, 1, 3),
-                                                                     new ItemStack(ForbiddenItems.deadlyShards, 1, 1)});
+                                                    new AspectList()
+                                                            .add(DarkAspects.SLOTH, 16)
+                                                            .add(DarkAspects.PRIDE, 16)
+                                                            .add(Aspect.AURA, 32)
+                                                            .add(Aspect.MAGIC,32),energyCrystal, new ItemStack[] {new ItemStack(ForbiddenItems.deadlyShards, 1, 5),
+                            balancedShard,
+                            new ItemStack(ForbiddenItems.deadlyShards, 1, 5),
+                            balancedShard,
+                            new ItemStack(ForbiddenItems.deadlyShards, 1, 5),
+                            balancedShard});
         }
         RecipeAttune recipeAttune = new RecipeAttune();
         ThaumcraftApi.getCraftingRecipes().add(recipeAttune);
