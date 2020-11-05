@@ -34,6 +34,7 @@ public class ItemMatrix
         this.setHasSubtypes(true);
         this.setCreativeTab(NodalMechanics.mainTab);
         this.setUnlocalizedName("nodalmechanics.matrix");
+        this.setMaxStackSize(1);
     }
     @Override
     public String getUnlocalizedName(ItemStack stack)
