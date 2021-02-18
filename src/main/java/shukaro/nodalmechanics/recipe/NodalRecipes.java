@@ -92,13 +92,13 @@ public class NodalRecipes
         variedNodeTagCompound.setInteger("nodetype", 0);
         ItemStack variedNode = ItemApi.getItem("itemJarNode", 0);
         variedNode.setTagCompound(variedNodeTagCompound);
-        variedNodeRecipe = new InfusionRecipe("NODECATALYZATION", variedNode, 10, new AspectList().add(Aspect.AIR, 4)
-                                                                                                  .add(Aspect.EARTH, 4)
-                                                                                                  .add(Aspect.FIRE, 4)
-                                                                                                  .add(Aspect.WATER, 4)
-                                                                                                  .add(Aspect.ORDER, 4)
+        variedNodeRecipe = new InfusionRecipe("NODECATALYZATION", variedNode, 10, new AspectList().add(Aspect.AIR, 8)
+                                                                                                  .add(Aspect.EARTH, 8)
+                                                                                                  .add(Aspect.FIRE, 8)
+                                                                                                  .add(Aspect.WATER, 8)
+                                                                                                  .add(Aspect.ORDER, 8)
                                                                                                   .add(Aspect.ENTROPY,
-                                                                                                       4), variedAttune,
+                                                                                                       8), variedAttune,
                                               new ItemStack[] {ItemApi.getItem("itemResource", 14),
                                                                ItemApi.getItem("itemResource", 14),
                                                                ItemApi.getItem("itemResource", 14),
@@ -110,7 +110,7 @@ public class NodalRecipes
         ItemStack sameNode = ItemApi.getItem("itemJarNode", 0);
         sameNode.setTagCompound(sameNodeTagCompound);
         sameNodeRecipe =
-            new InfusionRecipe("NODECATALYZATION", sameNode, 10, new AspectList().add(Aspect.FIRE, 32), sameAttune,
+            new InfusionRecipe("NODECATALYZATION", sameNode, 10, new AspectList().add(Aspect.FIRE, 64), sameAttune,
                                new ItemStack[] {ItemApi.getItem("itemResource", 14),
                                                 ItemApi.getItem("itemResource", 14),
                                                 ItemApi.getItem("itemResource", 14),
