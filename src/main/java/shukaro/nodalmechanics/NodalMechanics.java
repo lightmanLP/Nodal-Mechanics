@@ -23,7 +23,7 @@ public class NodalMechanics
 
     public static final String modID = "NodalMechanics";
     public static final String modName = "NodalMechanics";
-    public static final String modVersion = "1.7.10R1.0";
+    public static final String modVersion = "GRADLETOKEN_VERSION";
 
     public static Logger logger;
 
