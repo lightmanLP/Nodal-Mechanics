@@ -1,9 +1,9 @@
 // Add your dependencies here
 
 dependencies {
-    compile("com.github.GTNewHorizons:ForbiddenMagic:unified-build-script-SNAPSHOT:dev")   // TODO: change to master
-    compile("com.github.GTNewHorizons:Tainted-Magic:update-build-script-SNAPSHOT:dev")   // TODO: change to master
-    compile("com.github.GTNewHorizons:BloodMagic:update-build-script-SNAPSHOT:dev")   // TODO: change to master
+    compile("com.github.GTNewHorizons:ForbiddenMagic:master-SNAPSHOT:dev")
+    compile("com.github.GTNewHorizons:Tainted-Magic:master-SNAPSHOT:dev")
+    compile("com.github.GTNewHorizons:BloodMagic:master-SNAPSHOT:dev")
 
     compile("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
     compile("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
