@@ -1,9 +1,8 @@
 package shukaro.nodalmechanics.net;
 
-public class CommonProxy
-{
-    public void init()
-    {
+public class CommonProxy {
+
+    public void init() {
 
     }
 }

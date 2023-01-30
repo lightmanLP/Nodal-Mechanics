@@ -5,8 +5,8 @@ package shukaro.nodalmechanics.util;
  *
  * @author MachineMuse
  */
-public enum FormatCodes
-{
+public enum FormatCodes {
+
     Black("\u00A70"),
     DarkBlue("\u00A71"),
     DarkGreen("\u00A72"),
@@ -32,8 +32,7 @@ public enum FormatCodes
 
     public String code;
 
-    private FormatCodes(String s)
-    {
+    private FormatCodes(String s) {
         this.code = s;
     }
 }
