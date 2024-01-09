@@ -6,6 +6,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.oredict.OreDictionary;
 
+import fox.spiteful.forbidden.DarkAspects;
+import fox.spiteful.forbidden.items.ForbiddenItems;
+import ic2.core.Ic2Items;
 import shukaro.nodalmechanics.items.NodalItems;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.ThaumcraftApi;
@@ -13,9 +16,6 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
-import fox.spiteful.forbidden.DarkAspects;
-import fox.spiteful.forbidden.items.ForbiddenItems;
-import ic2.core.Ic2Items;
 
 public class NodalRecipes {
 
