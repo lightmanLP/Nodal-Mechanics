@@ -2,7 +2,7 @@
 
 dependencies {
     api("com.github.GTNewHorizons:ForbiddenMagic:0.6.7-GTNH:dev")
-    api("com.github.GTNewHorizons:Tainted-Magic:8.1.1.1-GTNH:dev")
+    api("com.github.GTNewHorizons:Tainted-Magic:7.6.4-GTNH:dev")
     api("com.github.GTNewHorizons:BloodMagic:1.4.3:dev")
 
     api("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
