@@ -1,12 +1,12 @@
 // Add your dependencies here
 
 dependencies {
-    compile("com.github.GTNewHorizons:ForbiddenMagic:master-SNAPSHOT:dev")
-    compile("com.github.GTNewHorizons:Tainted-Magic:master-SNAPSHOT:dev")
-    compile("com.github.GTNewHorizons:BloodMagic:master-SNAPSHOT:dev")
+    api("com.github.GTNewHorizons:ForbiddenMagic:0.6.7-GTNH:dev")
+    api("com.github.GTNewHorizons:Tainted-Magic:8.1.1.1-GTNH:dev")
+    api("com.github.GTNewHorizons:BloodMagic:1.4.3:dev")
 
-    compile("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
-    compile("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
+    api("thaumcraft:Thaumcraft:1.7.10-4.2.3.5:dev")
+    api("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
 
-    runtimeOnly("com.github.GTNewHorizons:Baubles:master-SNAPSHOT:dev")
+    runtimeOnly("com.github.GTNewHorizons:Baubles:1.0.3:dev")
 }

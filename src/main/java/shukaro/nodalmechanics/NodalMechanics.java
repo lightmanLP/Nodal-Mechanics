@@ -5,16 +5,16 @@ import net.minecraft.util.StatCollector;
 
 import org.apache.logging.log4j.Logger;
 
-import shukaro.nodalmechanics.gui.NodalTab;
-import shukaro.nodalmechanics.items.NodalItems;
-import shukaro.nodalmechanics.net.CommonProxy;
-import shukaro.nodalmechanics.recipe.NodalRecipes;
-import shukaro.nodalmechanics.research.NodalResearch;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import shukaro.nodalmechanics.gui.NodalTab;
+import shukaro.nodalmechanics.items.NodalItems;
+import shukaro.nodalmechanics.net.CommonProxy;
+import shukaro.nodalmechanics.recipe.NodalRecipes;
+import shukaro.nodalmechanics.research.NodalResearch;
 
 @Mod(
         modid = NodalMechanics.modID,

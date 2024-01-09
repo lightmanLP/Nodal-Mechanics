@@ -15,12 +15,12 @@ import net.minecraft.util.StatCollector;
 
 import org.apache.commons.lang3.text.WordUtils;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import shukaro.nodalmechanics.NodalMechanics;
 import shukaro.nodalmechanics.util.FormatCodes;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemMatrix extends Item {
 
