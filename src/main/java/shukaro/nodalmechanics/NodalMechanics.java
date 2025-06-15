@@ -20,7 +20,7 @@ import shukaro.nodalmechanics.research.NodalResearch;
         modid = NodalMechanics.modID,
         name = NodalMechanics.modName,
         version = NodalMechanics.modVersion,
-        dependencies = "required-after:Thaumcraft; required-after:ForbiddenMagic; required-after:TaintedMagic; required-after:AWWayofTime; required-after: IC2")
+        dependencies = "required-after:Thaumcraft; required-after:ForbiddenMagic; required-after:TaintedMagic")
 public class NodalMechanics {
 
     @SidedProxy(

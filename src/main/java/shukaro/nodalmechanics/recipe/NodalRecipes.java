@@ -2,13 +2,13 @@ package shukaro.nodalmechanics.recipe;
 
 import java.util.ArrayList;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.oredict.OreDictionary;
 
 import fox.spiteful.forbidden.DarkAspects;
 import fox.spiteful.forbidden.items.ForbiddenItems;
-import ic2.core.Ic2Items;
 import shukaro.nodalmechanics.items.NodalItems;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.ThaumcraftApi;
@@ -24,12 +24,12 @@ public class NodalRecipes {
     public static ShapedArcaneRecipe sameAttuneRecipe;
     public static InfusionRecipe variedNodeRecipe;
     public static InfusionRecipe sameNodeRecipe;
-    private ItemStack lapotronCrystal;
+    private ItemStack diamond;
     private ArrayList<ItemStack> circuitAdvancedList;
     private ItemStack balancedShard;
 
     public NodalRecipes() {
-        lapotronCrystal = new ItemStack(Ic2Items.lapotronCrystal.getItem(), 1, OreDictionary.WILDCARD_VALUE);
+        diamond = new ItemStack(Items.diamond, 1, OreDictionary.WILDCARD_VALUE);
         circuitAdvancedList = OreDictionary.getOres("circuitAdvanced");
         balancedShard = ItemApi.getItem("itemShard", 6);
         matrixRecipe = new InfusionRecipe(
@@ -38,7 +38,7 @@ public class NodalRecipes {
                 10,
                 new AspectList().add(DarkAspects.SLOTH, 16).add(DarkAspects.PRIDE, 16).add(Aspect.AURA, 32)
                         .add(Aspect.MAGIC, 32),
-                lapotronCrystal,
+                diamond,
                 new ItemStack[] { new ItemStack(ForbiddenItems.deadlyShards, 1, 3), balancedShard,
                         new ItemStack(ForbiddenItems.deadlyShards, 1, 5), balancedShard,
                         new ItemStack(ForbiddenItems.deadlyShards, 1, 5), balancedShard });
@@ -142,7 +142,7 @@ public class NodalRecipes {
                     10,
                     new AspectList().add(DarkAspects.SLOTH, 16).add(DarkAspects.PRIDE, 16).add(Aspect.AURA, 32)
                             .add(Aspect.MAGIC, 32),
-                    lapotronCrystal,
+                    diamond,
                     new ItemStack[] { new ItemStack(ForbiddenItems.deadlyShards, 1, 3), balancedShard,
                             new ItemStack(ForbiddenItems.deadlyShards, 1, 5), balancedShard,
                             new ItemStack(ForbiddenItems.deadlyShards, 1, 5), balancedShard });
